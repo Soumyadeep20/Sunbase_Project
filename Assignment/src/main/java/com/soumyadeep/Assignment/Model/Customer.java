@@ -9,7 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
+import java.util.*;
 
 @Entity
 @NoArgsConstructor
@@ -17,11 +17,10 @@ import java.util.UUID;
 @Data@Builder
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private String uuid;
     private String email;
-    private String firstName;
-    private String lastName;
+    private String first_name;
+    private String last_name;
     private String address;
     private String street;
     private String city;
